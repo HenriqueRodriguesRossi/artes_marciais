@@ -4,7 +4,7 @@ const captureErrorYup = require("../utils/captureErrorYup")
 
 exports.newStudent = async(req, res)=>{
     try{
-        const {} = req.body
+        const {nome_completo, data_de_nascimento, cpf, email, senha, arte_marcial} = req.body
     }catch(error){
         if(error instanceof yup.ValidationError){
             const errors = [captureErrorYup(error)]
